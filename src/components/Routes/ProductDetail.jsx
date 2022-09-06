@@ -32,7 +32,7 @@ const ProductDetail = () => {
         productInfo={productInfo}
       />
       <div className="similar-items">
-        <h2>Similar items</h2>
+        <h3 className='similar-tems__title'>Discover similar items</h3>
         <div className="similar-items__content-cards">
           {
             filteredProducts?.map(filteredProduct => (

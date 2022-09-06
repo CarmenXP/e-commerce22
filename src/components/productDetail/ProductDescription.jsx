@@ -32,11 +32,11 @@ const ProductDescription = ({productInfo}) => {
                 </article>
                 <article className="product-info__quantity">
                     <h3 className="product-info__quantity-labe">Quantity</h3>
-                    <div className="product-info__quantity">
+                    <span className="product-info__quantity-btns">
                         <button onClick={handleMinus}>-</button>
                             <span>{counter}</span>
                         <button onClick={handlePlus}>+</button>
-                    </div>
+                    </span>
 
                 </article>
             </div>
