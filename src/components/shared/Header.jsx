@@ -11,16 +11,16 @@ const Header = () => {
         <ul className="header__list">
           <li className="header__item">
             <NavLink to="/login" className={({isActive}) => isActive ? 'active-link' : ''} >
-              Login
+            <i className="fa-solid fa-user"></i>
             </NavLink>
           </li>
           <li className="header__item">
             <NavLink to="/purchases"  className={({isActive}) => isActive ? 'active-link' :''}>
-              Purchases
+              <i className="fa-solid fa-box-archive"></i>
             </NavLink>
           </li>
           <li className="header__item">
-            <h2>Cart</h2>
+            <i className="fa-solid fa-cart-shopping"></i>
           </li>
         </ul>
       </nav>

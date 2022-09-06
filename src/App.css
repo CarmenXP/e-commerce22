@@ -2,3 +2,158 @@
     background-color: gainsboro;
     color: orange;
 }
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*NAVBAR**************************************/
+.header{
+    width: 100%;
+    background-color: rgb(221, 221, 217);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+   
+}
+.header__logo{
+    color: rgb(243, 100, 49);
+    margin-left: 20px;
+}
+.header__nav{
+    width: 50%;
+}
+.header__list{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content:space-around;
+    align-items:center;
+    padding: 0;
+    margin: 0;
+    
+}
+.header__item{
+    list-style: none;
+    
+}
+.fa-solid{
+    font-size: 28px;
+    color: gray;
+}
+a{
+    text-decoration: none;
+}
+
+/*CARDS HOME*****************************************/
+.home__container-card{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(241, 237, 229);
+    justify-content: space-around;
+}
+.card-home{
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 7px;
+    margin: 25px 0px;
+}
+.card-home__header{
+ padding: 20px;
+ height: 220px;
+ border-bottom: 1px solid gray;
+}
+.card-home__img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+   
+}
+.card-home__btn{
+    padding:  13px 11.5px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(241, 114, 68);
+}
+.card-home__btn .fa-cart-shopping{
+    color: aliceblue;
+    font-size: 20px;
+
+}
+.card-home__price-label{
+    color: gray;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+/*Detail container****************************/
+.detail-container{
+    display: flex;
+    background-color: bisque;
+    margin: 25px 0px;
+}
+.product-info{
+ width: 50%;
+ margin-left: 15px;
+
+}
+.product-info__description{
+    width: 85%;
+}
+.product-info__body{
+    display: flex;
+    width: 100%;
+}
+.product-info__price, .product-info__quantity{
+    width: 40%;
+}
+.product-info__btn-add .fa-cart-shopping{
+    font-size: 18px;
+    color: white;
+    margin-left: 8px;
+   
+}
+
+.product-info__btn-add{
+    background-color: rgb(240, 125, 84);
+    font-size: 16px;
+    padding: 10px ;
+    color: white;
+    width: 85%;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.carousel__content{
+    width: 50%;
+    height: 400px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-chevron-left, .fa-chevron-right{
+    color: black;
+    cursor: pointer;
+}
+
+.image__carousel{
+    width: 500px;
+    height: 280px;
+    
+    text-align: center;
+    
+}
+.carousel__detail-img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/******Similar items**********/
+.similar-items{
+    background-color: azure;
+    display: flex;
+}
