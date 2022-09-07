@@ -45,16 +45,40 @@ body{
 a{
     text-decoration: none;
 }
-
-
+/******SEARCHBAR***********************************/
+.searchBar{
+    margin: 45px 0px 25px 0px;
+    
+}
+.input__searchBar{
+    padding: 10px 5px;
+    width: 85%;
+    outline: none;
+    margin-left: 20px;
+    border: .5px solid rgb(155, 152, 152);
+}
+.searchBar__btn{
+    padding: 10px;
+    background-color: rgb(241, 114, 68);
+    border: .5px solid  rgb(241, 114, 68) ;
+    
+}
+.fa-magnifying-glass{
+    font-size: medium;
+    color: white;
+   
+}
 /*+++++++++++++++++CARDS HOME  y SIMILAR ITEMS*****************************************/
 .home{
     display: flex;
 }
+.home__container{
+    display: flex;
+    flex-direction: column;
+}
 .home__container-card{
     display: flex;
     flex-wrap: wrap;
-    background-color: rgb(241, 237, 229);
     justify-content: space-around;
 }
 .card-home, .card-similarItem{
@@ -67,7 +91,7 @@ a{
 .card-home__header, .card-similarItem__header{
  padding: 20px;
  height: 220px;
- border-bottom: 1px solid rgb(173, 171, 171);;
+ border-bottom: 1px solid rgb(173, 171, 171);
 }
 .card-home__img, .card-similarItem__img{
     object-fit: contain;
@@ -109,7 +133,11 @@ a{
 }
 /******************************MENU VERTICAL**************/
 .aside-menu{
-    width: 65%;
+    width: 60%;
+    max-width: 270px;
+    min-width: 200px;
+    border-right: .5px solid rgb(173, 171, 171);
+    margin-right: 25px;
 }
 .filter-price__title{
     margin: 25px 0px 10px 10px;

@@ -9,6 +9,7 @@ import Header from '../src/components/shared/Header'
 import { useEffect } from 'react'
 import axios from 'axios'
 import Cart from './components/shared/Cart'
+import ProtectedRoutes from './components/Routes/ProtectedRoutes'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,8 +37,10 @@ function App() {
         <Route path='/' element ={<Home/>}/>
         <Route path='/product/:id' element ={<ProductDetail/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/purchases' element ={<Purchases/>}/>
-        <Route path='/cart' element={<Cart/>}/>
+        <Route element={<ProtectedRoutes/>}>
+          <Route path='/purchases' element ={<Purchases/>}/>
+          <Route path='/cart' element={<Cart/>}/>
+        </Route>
       </Routes>
     </div>
   )
