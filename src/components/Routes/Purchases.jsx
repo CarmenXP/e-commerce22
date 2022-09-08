@@ -16,6 +16,7 @@ const Purchases = () => {
   console.log(purchases)
   return (
     <div className="purchases">
+      <h2 className='purchases-title'>My purchases</h2>
       <div className="purchases-container">
         {
           purchases?.map(purchase =>(

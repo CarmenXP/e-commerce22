@@ -19,4 +19,4 @@ const PurchaseCard = ({purchase}) => {
   )
 }
 
-export default PurchaseCard
+export default PurchaseCard 
