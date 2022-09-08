@@ -4,7 +4,8 @@ import getConfig from '../../utils/getConfig'
 
 const ProductDescription = ({productInfo}) => {
     console.log(productInfo, 'ProductINFOOOOO')
-    
+
+    const [currentImage, setCurrentImage]=useState(0)
     const [counter, setCounter] = useState(1)
     const handlePlus = () => setCounter(counter +1)
     const handleMinus = () => {
@@ -22,17 +23,26 @@ const ProductDescription = ({productInfo}) => {
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
     }
-    console.log(counter)
+    console.log(currentImage, 'imagen Carousel')
+
+    const handleNext = () =>{
+        currentImage < productInfo?.productImgs.length -1 && 
+        setCurrentImage(currentImage + 1)
+    }
+
+    const handlePrevious = () =>{
+        currentImage > 0 && setCurrentImage(currentImage -1)
+    }
   return (
     <div className="detail-container">
         
             <div className="carousel__content">
                 
-                <i className="fa-solid fa-chevron-left"></i>
+                <i onClick={handlePrevious}className="fa-solid fa-chevron-left"></i>
                 <div className="image__carousel">
-                    <img className ='carousel__detail-img'src={productInfo?.productImgs[0]} alt="" />
+                    <img className ='carousel__detail-img'src={`${productInfo?.productImgs[currentImage]}`} alt="" />
                 </div>
-                <i className="fa-solid fa-chevron-right"></i>
+                <i onClick={handleNext}className="fa-solid fa-chevron-right"></i>
             </div>
         
     
