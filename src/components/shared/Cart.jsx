@@ -6,11 +6,18 @@ import getConfig from '../../utils/getConfig'
 const Cart = () => {
 
     const [cartProducts, setCartProducts] = useState()
+    //const [total, setTotal] = useState()
 
     const getAllProductsCart = () =>{
         const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
         axios.get(URL, getConfig())
-        .then(res => setCartProducts(res.data.data.cart.products))
+        .then(res => {
+            setCartProducts(res.data.data.cart.products)
+            /*const total = products.reduce((acc, cv) =>{
+                return Number(cv.price)*cv.productsInCart.quantity + acc
+            }, 0)
+            setTotal(total)*/
+        })
         .catch(err => setCartProducts())
     }
     useEffect(() => {
@@ -30,13 +37,22 @@ const Cart = () => {
             references: "Some references"
             } 
         axios.post(URL, obj, getConfig())
-        .then(res => console.log(res.data))
+        .then(res => {
+            console.log(res.data)
+            getAllProductsCart()
+            //setTotal(0)
+        })
         .catch(err => console.log(err))
-    }    
+    }  
+
+    const handletotal = () =>{
+        return cartProducts?.reduce((price, product) => price + product.price*product.productsInCart.quantity, 0)
+    }
+   
   return (
     <article className="cart">
         <h2 className='cart__title'>Cart</h2>
-        <div >
+        <div className='cart__content-cards' >
             {
                 cartProducts?.map(product => (
                     <ProductCardInfo
@@ -47,11 +63,10 @@ const Cart = () => {
                 ))
             }
         </div>
-        
-        <hr className="cart__hr" />
         <footer className="cart__footer">
-            <span className="cart__total-global-label">Total</span>
-            <p className="cart__total-global-value">1350</p>
+            <span className="cart__total-global-label">Total: </span>
+            <span className="cart__total-global-value"> ${handletotal()}</span>
+            <br/>
             <button className="cart__btn" onClick={handleCheckout}>Checkout</button>
         </footer>
     </article>

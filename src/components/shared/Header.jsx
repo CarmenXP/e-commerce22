@@ -20,7 +20,10 @@ const Header = () => {
             </NavLink>
           </li>
           <li className="header__item">
-            <i className="fa-solid fa-cart-shopping"></i>
+            <NavLink to ='/cart'>
+              <i className="fa-solid fa-cart-shopping"></i>
+            </NavLink>
+            
           </li>
         </ul>
       </nav>

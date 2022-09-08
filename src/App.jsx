@@ -1,18 +1,16 @@
-import { useState } from 'react'
-import {NavLink,Routes, Route } from 'react-router-dom'
+
+import {Routes, Route } from 'react-router-dom'
 import './App.css'
 import Home from './components/Routes/Home'
 import ProductDetail from './components/Routes/ProductDetail'
 import Login from './components/Routes/Login'
 import Purchases from './components/Routes/Purchases'
 import Header from '../src/components/shared/Header'
-import { useEffect } from 'react'
-import axios from 'axios'
 import Cart from './components/shared/Cart'
 import ProtectedRoutes from './components/Routes/ProtectedRoutes'
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 /*  creando un usuario
   useEffect(() => {
     const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/users'

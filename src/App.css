@@ -10,12 +10,12 @@ body{
 /*NAVBAR**************************************/
 .header{
     width: 100%;
-    background-color: rgb(221, 221, 217);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 60px;
-   
+    border-bottom: 1px solid rgb(238, 238, 238);
+    background-color: rgb(238, 238, 238);;
 }
 .header__logo{
     color: rgb(243, 100, 49);
@@ -48,13 +48,14 @@ a{
 /******SEARCHBAR***********************************/
 .searchBar{
     margin: 45px 0px 25px 0px;
-    
+    width: 100%;
+    text-align: center;
 }
+
 .input__searchBar{
     padding: 10px 5px;
-    width: 85%;
+    width: 80%;
     outline: none;
-    margin-left: 20px;
     border: .5px solid rgb(155, 152, 152);
 }
 .searchBar__btn{
@@ -75,11 +76,14 @@ a{
 .home__container{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 .home__container-card{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin: 0px 20px;
+    gap: 10px;
 }
 .card-home, .card-similarItem{
     width: 300px;
@@ -138,6 +142,7 @@ a{
     min-width: 200px;
     border-right: .5px solid rgb(173, 171, 171);
     margin-right: 25px;
+    display: block;
 }
 .filter-price__title{
     margin: 25px 0px 10px 10px;
@@ -190,7 +195,6 @@ a{
 /*******************Detail container****************************/
 .detail-container{
     display: flex;
-    background-color: bisque;
     margin: 25px 0px;
 
 }
@@ -269,7 +273,7 @@ a{
 
 /******Similar items**********/
 .similar-items{
-    background-color: azure;
+
     
 }
 .similar-items__content-cards{
@@ -287,4 +291,162 @@ a{
     color: rgb(241, 114, 68);
     padding-top: 10px;
     padding-left: 25px;
+}
+/**************CART***************/
+.cart{
+    display: flex;
+    flex-direction: column;
+     min-height: 100vh;
+}
+.cart__title{
+    color: rgb(241, 114, 68);
+    margin: 10px 0px 15px 10px; 
+}
+.cart__content-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    min-height: 65vh;
+    align-items: flex-start;
+    gap: 25px;
+
+}
+.cart__item{
+    background-color: aliceblue;
+    width: 330px;
+    border: 1px solid rgb(201, 195, 195);
+    border-radius: 5px;
+    padding: 10px;
+    position: relative;
+    margin: 10px 0px 10px 10px;
+}
+.cart__category{
+    margin: 10px 0px;
+    color: rgb(150, 148, 148);
+}
+.cart__subtitle{
+    color: rgb(104, 101, 101);
+}
+.cart__quantity{
+    padding: 5px 10px;
+    border: 1px solid rgb(177, 173, 173);
+    
+}
+.fa-trash-can{
+     position: absolute;
+     top: 22px;
+     right: 20px;
+     font-size: 18px;
+     color:rgb(241, 114, 68);
+     cursor: pointer;
+}
+.cart__content-total{
+    margin-top: 12px;
+    color: gray;
+}
+.cart__total-global-label{
+    margin-left: 25px;
+    color: gray;
+}
+.cart__total-global-value{
+    color: rgb(78, 75, 75);
+}
+.cart__btn{
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    width: 30%;
+    background-color: rgb(241, 114, 68);
+    cursor: pointer;
+    border: none;
+    color: aliceblue;
+    font-size: medium;
+}
+.cart__footer{
+    margin-top: 20px;  
+    text-align: center;
+    margin-top: 25px;
+}
+/****+*****LOGIN y LOGOUT*******************/
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+.form-logout{
+    border: 1px solid rgb(214, 211, 211);
+    width: 320px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    background-color: white
+}
+.form-logout__btn{
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    background-color: white;
+    font-size: medium;
+    cursor: pointer;
+    color: rgb(60, 60, 129);
+}
+.logout-icon {
+    width: 120px;
+    height: 115px;
+    border-radius: 50%;
+    background-color: rgb(245, 238, 238);
+    margin-top: 15px;
+}
+.logout-icon .fa-user{
+    color: rgb(241, 114, 68);
+    padding-top: 25px;
+    font-size: 55px;
+}
+.login__form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    border: 1px solid rgb(212, 208, 208);
+    padding: 20px 15px;
+}
+.login__title{
+    color: rgb(116, 106, 106);
+    text-align: center;
+}
+.login__div-email, .login__div-password{
+    margin: 10px 0px;
+    width: 85%;
+}
+.login__input{
+    padding: 8px 0px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(212, 208, 208);
+    margin-top: 10px;
+}
+.login__label{
+    color: rgb(150, 145, 145);
+    padding-bottom: 15px;
+}
+.login__btn{
+    padding: 8px 5px;  
+    background-color:rgb(241, 114, 68);
+    color: white;
+    border: none;
+    width: 85%;
+    margin: 15px 0px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+
+/*********************QUERIES@*****************************/
+@media only screen and (max-width: 992px){
+    .aside-menu{
+        display: none;
+    }
 }
