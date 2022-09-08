@@ -201,10 +201,11 @@ a{
 .product-info{
  width: 50%;
  margin-left: 15px;
-
+    color: rgb(82, 80, 80);
 }
 .product-info__description{
     width: 85%;
+    
 }
 .product-info__body{
     display: flex;
@@ -473,6 +474,28 @@ a{
 .purchases-title{
     color:rgb(241, 114, 68);
 }
+/**********************FOOTER********************/
+.footer{
+    background-color: rgb(32, 32, 32);
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(201, 199, 199);
+}
+.iconos-footer{
+
+}
+.fa-linkedin, .fa-youtube, .fa-instagram{
+    font-size: 20px;
+    margin: 5px 20px;
+    padding: 15px;
+    border-radius: 50%;
+    background-color: rgb(56, 54, 54);
+    cursor: pointer;
+}
+
 
 
 /*********************QUERIES@*****************************/

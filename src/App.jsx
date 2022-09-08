@@ -8,6 +8,7 @@ import Purchases from './components/Routes/Purchases'
 import Header from '../src/components/shared/Header'
 import Cart from './components/shared/Cart'
 import ProtectedRoutes from './components/Routes/ProtectedRoutes'
+import Footer from './components/shared/Footer'
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
           <Route path='/cart' element={<Cart/>}/>
         </Route>
       </Routes>
+      <Footer/>
     </div>
   )
 }
